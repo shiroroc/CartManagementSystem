@@ -1,0 +1,46 @@
+core-business-service/
+├── pom.xml
+└── src/
+    ├── main/
+    │   ├── java/
+    │   │   └── com/eshoppingzone/core/
+    │   │       ├── CoreApplication.java              (The Bootstrapper)
+    │   │       │
+    │   │       ├── config/                           (App-specific settings)
+    │   │       │   ├── OpenAPIConfig.java            (Swagger API docs setup)
+    │   │       │   └── RabbitMQConfig.java           *(Only for Order/Wallet)*
+    │   │       │
+    │   │       ├── controller/                       (The HTTP Routers)
+    │   │       │   └── CoreController.java           (REST endpoints)
+    │   │       │
+    │   │       ├── dto/                              (Data Transfer Objects)
+    │   │       │   ├── request/
+    │   │       │   │   └── CoreRequestDTO.java       (Incoming JSON map)
+    │   │       │   └── response/
+    │   │       │       └── CoreResponseDTO.java      (Outgoing JSON map)
+    │   │       │
+    │   │       ├── entity/                           (Database Table Map)
+    │   │       │   └── CoreEntity.java               (@Entity mapping to MySQL)
+    │   │       │
+    │   │       ├── exception/                        (Error Handling)
+    │   │       │   ├── GlobalExceptionHandler.java   (@RestControllerAdvice)
+    │   │       │   └── ResourceNotFoundException.java(Custom error)
+    │   │       │
+    │   │       ├── repository/                       (Database Operations)
+    │   │       │   └── CoreRepository.java           (Extends JpaRepository)
+    │   │       │
+    │   │       ├── service/                          (Business Logic Contract)
+    │   │       │   ├── CoreService.java              (Interface)
+    │   │       │   └── impl/
+    │   │       │       └── CoreServiceImpl.java      (The actual logic/heavy lifting)
+    │   │       │
+    │   │       └── util/                             (Helper classes)
+    │   │           └── EntityDtoMapper.java          (Converts Entities to DTOs)
+    │   │
+    │   └── resources/
+    │       └── application.yml                       (MySQL, Eureka, and Port configs)
+
+
+
+
+    
